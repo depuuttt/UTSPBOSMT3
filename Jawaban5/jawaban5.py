@@ -20,6 +20,8 @@ class Time:
             print("Seconds can not go past 60")
             print("Please try again. ^_^")
             return False
+        else:
+            return True
 
     def result(self):
         print(str(self.hours) + " : " +
@@ -33,6 +35,6 @@ seconds = input("Masukkan Detik : ")
 time = Time(int(hours), int(minutes), int(seconds))
 
 if not time.limitFunc():
-    sys.exit()
+    exit()
 
 time.result()
